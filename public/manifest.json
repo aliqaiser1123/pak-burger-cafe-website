@@ -1,0 +1,24 @@
+{
+  "short_name": "Pak Burger",
+  "name": "Pak Burger House Khanewal",
+  "description": "Best premium burgers, cheesy pizzas, and deals in Khanewal.",
+  "icons": [
+    {
+      "src": "/slip_logo.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/slip_logo.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#000000",
+  "theme_color": "#E50914",
+  "display": "standalone",
+  "orientation": "portrait"
+}

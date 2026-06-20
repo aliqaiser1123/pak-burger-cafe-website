@@ -1,0 +1,234 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 0;
+  background: var(--primary-light);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.logo-img {
+  height: 40px;
+  object-fit: contain;
+}
+
+@keyframes floatSplashing {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: translateY(-5px) rotate(2deg) scale(1.02);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+
+
+.logo-text {
+  font-family: 'Chewy', cursive;
+  font-size: 1.7rem;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--highlight) 50%, var(--accent) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: var(--glass-bg);
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+}
+
+.cart-link:hover {
+  background: rgba(245, 197, 24, 0.1);
+  border-color: var(--highlight);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+}
+
+.nav-icon-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.nav-icon-btn:hover {
+  background: var(--glass-bg);
+  color: var(--highlight);
+}
+
+.login-link {
+  border: 1px solid var(--accent);
+  padding: 6px 16px;
+  border-radius: 20px;
+  color: var(--accent);
+}
+
+.login-link:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.mobile-toggle {
+  background: none;
+  border: none;
+  color: var(--text-main);
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  background: var(--primary-light);
+  border-top: 1px solid var(--glass-border);
+}
+
+.mobile-nav-link {
+  text-decoration: none;
+  color: var(--text-main);
+  padding: 15px 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .mobile-navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .mobile-cart-btn {
+    background: rgba(0, 0, 0, 0.03) !important;
+    padding: 8px 12px !important;
+    border-radius: 12px !important;
+    border: 1px solid var(--glass-border) !important;
+  }
+
+  .cart-pop-anim {
+    animation: cartPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-color: var(--highlight) !important;
+    background: rgba(245, 197, 24, 0.15) !important;
+    box-shadow: 0 0 15px rgba(245, 197, 24, 0.4);
+  }
+}
+
+@keyframes cartPop {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.4); }
+  50% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 500px) {
+  .logo-img {
+    height: 30px;
+  }
+  .logo-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    max-width: 150px;
+    line-height: 1.1;
+  }
+  .navbar-logo {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo-text {
+    display: none; /* Hide text on extremely small screens to keep layout clean */
+  }
+}

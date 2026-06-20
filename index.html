@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- PWA Meta Tags -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Pak Burger" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('Service Worker registered successfully:', reg.scope))
+          .catch(err => console.error('Service Worker registration failed:', err));
+      });
+    }
+  </script>
+  <meta name="description"
+    content="Pak Burger House Khanewal - Taste the best premium burgers, cheesy pizzas, and deals in Khanewal. Fast delivery and high-quality halal food. Order now!" />
+  <meta name="keywords"
+    content="Pak Burger Khanewal, Best Burger in Khanewal, Pizza Khanewal, Fast Food Delivery Khanewal, Deal Menu Khanewal, Pak Burger House" />
+  <meta name="author" content="Pak Burger House" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pakburger.com/" />
+  <meta property="og:title" content="Pak Burger Khanewal | Best Burgers & Pizza" />
+  <meta property="og:description"
+    content="Craving something spicy? Order the best burgers and pizzas in Khanewal from Pak Burger House. Fast delivery and premium taste for you!" />
+  <meta property="og:image" content="https://pakburger.com/logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://pakburger.com/" />
+  <meta property="twitter:title" content="Pak Burger Khanewal | Best Burgers & Pizza" />
+  <meta property="twitter:description"
+    content="Taste the premium difference with Pak Burger House Khanewal. Order now for lightning-fast delivery!" />
+  <meta property="twitter:image" content="https://pakburger.com/logo.png" />
+
+  <!-- Schema Markup (JSON-LD) for Local Business -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Pak Burger House Khanewal",
+      "image": "https://pakburger.com/logo.png",
+      "url": "https://pakburger.com/",
+      "telephone": "+923284403205",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Road",
+        "addressLocality": "Khanewal",
+        "addressRegion": "Punjab",
+        "addressCountry": "PK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "30.3017",
+        "longitude": "71.9321"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "12:00",
+        "closes": "23:59"
+      },
+      "servesCuisine": "Burgers, Pizza, Fast Food",
+      "priceRange": "₨ 150 - ₨ 2500"
+    }
+    </script>
+
+  <title>Pak Burger and Fresh Pizza | Taste and quality at one place</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
