@@ -2,8 +2,8 @@
   <h1>🍔 Pak Burger</h1>
   <p>A beautiful, modern web application built with React and Vite (using vibe coding guide).</p>
   <h3>Check out the website at pakburger.com</h3>
-  <h3>Owner: Muhamamd ALI</h3>
-  <h3>Contact: +923106643436</h3>
+  <h5>Owner: Muhamamd ALI</h5>
+  <h5>Contact: +923106643436</h5>
 </div>
 
 ---
